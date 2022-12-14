@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Round } from './models/app-models';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ export class AppComponent {
   public seconds = 0;
   public decSeconds = 0;
   public isActive = false;
-  public rounds: any[] = [];
+  public rounds: Round[] = [];
 
   private intervalId: NodeJS.Timer | undefined;
   
