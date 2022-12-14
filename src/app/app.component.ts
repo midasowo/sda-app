@@ -6,12 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public licznik = 0;
-  public myName = "";
+  public firstNumber = 0;
+  public secondNumber = 0;
+  public result: number = 0;
   
   public onClick(): void {
-    const myNameInput = document.getElementById("myName") as HTMLInputElement;
-    this.myName = myNameInput.value;
+    this.result = this.firstNumber + this.secondNumber;
   }
 
 }

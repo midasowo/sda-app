@@ -1,5 +1,5 @@
-<button (click)="onClick()">Click me</button>
-<div><input id="myName" type="text" /></div>
-<header>
-    <h1>{{ myName }}</h1>
-</header>
+<button (click)="onClick()">Calculate</button>
+<input type="number" [(ngModel)]="firstNumber" />
+<input type="number" [(ngModel)]="secondNumber" />
+<h1>Result: {{ result }}</h1>
+
