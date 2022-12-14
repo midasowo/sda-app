@@ -8,10 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public seconds = 0;
   public decSeconds = 0;
+  public isActive = false;
 
   private intervalId: NodeJS.Timer | undefined;
   
+  
   public startStoper(): void {
+    this.isActive = true;
     this.intervalId = setInterval(() =>{
       this.decSeconds++;
       if(this.decSeconds === 10){
@@ -22,11 +25,13 @@ export class AppComponent {
   }
 
   public stopStoper(): void {
+    this.isActive = false;
     if(this.intervalId)
     clearInterval(this.intervalId);
   }
 
   public resetStoper(): void {
+    this.isActive = false;
     this.seconds = 0;
     this.decSeconds = 0;
   }

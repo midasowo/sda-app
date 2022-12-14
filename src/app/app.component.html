@@ -1,5 +1,5 @@
-<button (click)="startStoper()">Start</button>
-<button (click)="stopStoper()">Stop</button>
-<button (click)="resetStoper()">Reset</button>
+<button *ngIf="!isActive" (click)="startStoper()">Start</button>
+<button *ngIf="isActive" (click)="stopStoper()">Stop</button>
+<button *ngIf="!isActive" (click)="resetStoper()">Reset</button>
 <h1>Time: {{ seconds }}: {{decSeconds}} </h1>
 
