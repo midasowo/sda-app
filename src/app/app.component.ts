@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sda-app';
+  public licznik = 0;
+  public myName = "";
+  
+  public onClick(): void {
+    const myNameInput = document.getElementById("myName") as HTMLInputElement;
+    this.myName = myNameInput.value;
+  }
+
 }
