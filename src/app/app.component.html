@@ -1,5 +1,12 @@
 <button *ngIf="!isActive" (click)="startStoper()">Start</button>
 <button *ngIf="isActive" (click)="stopStoper()">Stop</button>
+<button *ngIf="isActive" (click)="addRound()">Round</button>
 <button *ngIf="!isActive" (click)="resetStoper()">Reset</button>
 <h1>Time: {{ seconds }}: {{decSeconds}} </h1>
+
+<ol>
+    <li *ngFor="let round of rounds">
+        {{ round.seconds }}: {{ round.decSeconds }}
+    </li>
+</ol>
 

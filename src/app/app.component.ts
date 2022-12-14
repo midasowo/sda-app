@@ -9,6 +9,7 @@ export class AppComponent {
   public seconds = 0;
   public decSeconds = 0;
   public isActive = false;
+  public rounds: any[] = [];
 
   private intervalId: NodeJS.Timer | undefined;
   
@@ -34,6 +35,14 @@ export class AppComponent {
     this.isActive = false;
     this.seconds = 0;
     this.decSeconds = 0;
+    this.rounds = [];
+  }
+
+  public addRound(): void {
+    this.rounds.push({
+      seconds: this.seconds,
+      decSeconds: this.decSeconds
+    })
   }
 
 }
