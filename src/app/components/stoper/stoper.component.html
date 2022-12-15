@@ -10,12 +10,6 @@
 </div>
 
 <app-rounds-list [rounds]="rounds"></app-rounds-list>
+<app-results-list [results]="results"></app-results-list>
 
-<div>
-    <h2>Results</h2>
-    <ol>
-        <li *ngFor="let result of results">
-            {{ result.userName }} - {{ result.seconds }}:{{ result.decSeconds }}
-        </li>
-    </ol>
-</div>
+

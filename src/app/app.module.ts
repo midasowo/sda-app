@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { StoperComponent } from './components/stoper/stoper.component';
 import { RoundsListComponent } from './components/rounds-list/rounds-list.component';
+import { ResultsListComponent } from './components/results-list/results-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StoperComponent,
     RoundsListComponent,
+    ResultsListComponent,
   ],
   imports: [
     BrowserModule,
