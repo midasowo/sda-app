@@ -9,6 +9,7 @@ import { RoundsListComponent } from './components/rounds-list/rounds-list.compon
 import { ResultsListComponent } from './components/results-list/results-list.component';
 import { SaveResultComponent } from './components/save-result/save-result.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersListComponent } from './components/users-list/users-list.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     RoundsListComponent,
     ResultsListComponent,
     SaveResultComponent,
+    UsersListComponent,
   ],
   imports: [
     BrowserModule,
