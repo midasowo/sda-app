@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { StoperComponent } from './components/stoper/stoper.component';
 import { RoundsListComponent } from './components/rounds-list/rounds-list.component';
 import { ResultsListComponent } from './components/results-list/results-list.component';
+import { SaveResultComponent } from './components/save-result/save-result.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { ResultsListComponent } from './components/results-list/results-list.com
     StoperComponent,
     RoundsListComponent,
     ResultsListComponent,
+    SaveResultComponent,
   ],
   imports: [
     BrowserModule,

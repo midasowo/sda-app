@@ -12,7 +12,7 @@ export class StoperComponent {
   public isActive = false;
   public rounds: Round[] = [];
   public results: Result[] = [];
-  public userName = "";
+
 
   private intervalId: NodeJS.Timer | undefined;
   
@@ -48,14 +48,13 @@ export class StoperComponent {
     })
   }
 
-  public saveResult(): void {
-    if(this.userName) {
+  public saveResult(userName: string): void {
+    if(userName) {
     this.results.push({
-      userName: this.userName,
+      userName: userName,
       seconds: this.seconds,
       decSeconds: this.decSeconds,
     });
     }
-    this.userName = "";
   }
 }
