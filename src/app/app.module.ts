@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { StoperComponent } from './components/stoper/stoper.component';
+import { RoundsListComponent } from './components/rounds-list/rounds-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StoperComponent,
+    RoundsListComponent,
   ],
   imports: [
     BrowserModule,
