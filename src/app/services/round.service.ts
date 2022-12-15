@@ -12,7 +12,7 @@ export class RoundService {
     return this.rounds;
   }
 
-  addRaound(round: Round) {
+  addRound(round: Round): void {
     this.rounds.push(round);
   }
 

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Round, Result } from 'src/app/models/app-models';
+import { ResultService } from 'src/app/services/result.service';
 import { RoundService } from 'src/app/services/round.service';
 
 @Component({
@@ -16,8 +17,9 @@ export class StoperComponent {
 
   private intervalId: NodeJS.Timer | undefined;
 
-  constructor(private roundService: RoundService){
+  constructor(private roundService: RoundService, private resultService: ResultService){
     this.rounds = this.roundService.getRounds();
+    this.results = this.resultService.getResults();
   }
     
   public startStoper(): void {
@@ -44,7 +46,7 @@ export class StoperComponent {
   }
 
   public addRound(): void {
-    this.roundService.addRaound({
+    this.roundService.addRound({
       seconds: this.seconds,
       decSeconds: this.decSeconds,
     });
@@ -52,7 +54,7 @@ export class StoperComponent {
 
   public saveResult(userName: string): void {
     if(userName) {
-    this.results.push({
+    this.resultService.addResult({
       userName: userName,
       seconds: this.seconds,
       decSeconds: this.decSeconds,
