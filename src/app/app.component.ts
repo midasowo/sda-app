@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Round } from './models/app-models';
+import { Result, Round } from './models/app-models';
 
 @Component({
   selector: 'app-root',
@@ -11,6 +11,8 @@ export class AppComponent {
   public decSeconds = 0;
   public isActive = false;
   public rounds: Round[] = [];
+  public results: Result[] = [];
+  public userName = "";
 
   private intervalId: NodeJS.Timer | undefined;
   
@@ -44,6 +46,17 @@ export class AppComponent {
       seconds: this.seconds,
       decSeconds: this.decSeconds
     })
+  }
+
+  public saveResult(): void {
+    if(this.userName) {
+    this.results.push({
+      userName: this.userName,
+      seconds: this.seconds,
+      decSeconds: this.decSeconds,
+    });
+    }
+    this.userName = "";
   }
 
 }
