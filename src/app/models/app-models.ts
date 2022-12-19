@@ -16,6 +16,7 @@ export interface User {
     last_name: string;
     avatar: string;
   }
+  
   export interface ReqResponse {
     page: number;
     per_page: number;
