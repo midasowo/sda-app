@@ -12,7 +12,7 @@ export class UserService {
 
   public getUsers(): Observable<ReqResponse> {
     return this.httpClient.get<ReqResponse>(
-      "https://reqres.in/api/users?delay=5"
-      );
+      'https://reqres.in/api/users?delay=1'
+    );
   }
 }
